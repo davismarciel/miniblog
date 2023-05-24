@@ -21,6 +21,7 @@ nav button {
   text-decoration: none;
   background-color: transparent;
   border: none;
+  border-radius: 7px;
   color: #000;
   transition: .4s;
   font-size: 1em;
