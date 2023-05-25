@@ -28,7 +28,7 @@ const Home = () => {
       <div className="post-list">
         {loading && <p>Loading...</p>}
         {posts && posts.map((post) => (
-          <h3><PostDetail key={post.id} post={post} /></h3>
+          <h3 className={styles.post_container}><PostDetail key={post.id} post={post} /></h3>
         ))}
         {posts && posts.length === 0 && (
           <div className={styles.noposts}>
@@ -40,5 +40,7 @@ const Home = () => {
     </div>
   );
 };
+
+// function PostContainer()
 
 export default Home;

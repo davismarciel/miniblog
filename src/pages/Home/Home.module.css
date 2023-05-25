@@ -33,3 +33,10 @@
 h1 {
   text-align: center;
 }
+
+.post_container {
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: 1px 1px 7px -1px #000;
+  padding: 20px;
+}
