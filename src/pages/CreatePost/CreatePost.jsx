@@ -27,6 +27,7 @@ const CreatePost = () => {
       new URL(image);
     } catch (error) {
       setFormError('Invalid image URL');
+      return;
     }
 
     // Create tag array
@@ -95,7 +96,7 @@ const CreatePost = () => {
             onChange={(e) => setTags(e.target.value)}
             value={tags}
             type="text"
-            name="image"
+            name="tags"
             placeholder="Insert your tags"
             required
           />
