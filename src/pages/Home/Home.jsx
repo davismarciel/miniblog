@@ -22,7 +22,7 @@ const Home = () => {
         />
         <button className="btn btn-dark">Search</button>
       </form>
-      <div>
+      <div className="post-list">
         <h1>Posts</h1>
         {posts && posts.length === 0 && (
           <div className={styles.noposts}>
