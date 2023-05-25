@@ -34,5 +34,6 @@ module.exports = {
     'react/no-array-index-key': 'off',
     'react/prop-types': 'off',
     'no-new': 'off',
+    'prefer-const': 'off',
   },
 };
