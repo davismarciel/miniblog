@@ -15,27 +15,40 @@ const CreatePost = () => {
   const { user } = useAuthValue();
   const { insertDocument, response } = useInsertDocument('posts');
 
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     setFormError('');
 
     // Validate image
+    try {
+      new URL(image);
+    } catch (error) {
+      setFormError('Invalid image URL');
+    }
 
     // Create tag array
+    const tagsArray = tags.split(',').map((tags) => tags.trim().toLowerCase());
 
     // Checking all values
-
+    if (!title || !image || !body || !tags) {
+      setFormError('Fill all the empty fields');
+    }
+    if (formError) return;
     insertDocument({
       title,
       image,
       body,
-      tags,
+      tagsArray,
       uid: user.uid,
       createdBy: user.displayName,
     });
 
     // Navigate to home
+
+    navigate('/');
   };
 
   return (
@@ -88,6 +101,7 @@ const CreatePost = () => {
           />
         </label>
         {response.error && <p className="error">{response.error}</p>}
+        {formError && <p className="error">{formError}</p>}
         {!response.loading && <button className="btn">Post</button>}
         {response.loading && (<button disabled className="btn">Posting...</button>) }
       </form>

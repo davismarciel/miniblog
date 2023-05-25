@@ -33,5 +33,6 @@ module.exports = {
     'no-shadow': 'off',
     'react/no-array-index-key': 'off',
     'react/prop-types': 'off',
+    'no-new': 'off',
   },
 };
