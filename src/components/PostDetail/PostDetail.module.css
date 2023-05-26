@@ -1,5 +1,5 @@
 .post_detail {
-  margin-bottom: 2em;
+  margin-bottom: 1.8em;
 }
 
 .post_detail img {
@@ -11,6 +11,7 @@
 }
 
 .post_detail .tags {
+  font-size: 15px;
   margin-bottom: 1.2em;
   display: flex;
 }
@@ -27,5 +28,15 @@
   font-style: italic;
   font-size: .8em;
   color: #444;
-  margin-bottom: 1em;
+  margin-bottom: .8em;
+}
+
+span {
+  text-transform: capitalize;
+}
+
+.read_display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
