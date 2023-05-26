@@ -10,6 +10,7 @@ const Home = () => {
   const [query, setQuery] = useState('');
   const { documents: posts, loading } = useFetchDocument('posts');
   const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -32,7 +33,9 @@ const Home = () => {
       <div className="post-list">
         {loading && <p>Loading...</p>}
         {posts && posts.map((post) => (
-          <h3 className={styles.post_container}><PostDetail key={post.id} post={post} /></h3>
+          <h3 key={post.id} className={styles.post_container}>
+            <PostDetail key={post.id} post={post} />
+          </h3>
         ))}
         {posts && posts.length === 0 && (
           <div className={styles.noposts}>

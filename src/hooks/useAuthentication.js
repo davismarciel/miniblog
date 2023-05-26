@@ -84,8 +84,6 @@ export const useAuthentication = () => {
       setLoading(false);
 
       setError(systemErrorMessage);
-
-      console.log(error);
     }
     setLoading(false);
   };
