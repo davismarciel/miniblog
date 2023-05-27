@@ -35,5 +35,6 @@ module.exports = {
     'react/prop-types': 'off',
     'no-new': 'off',
     'prefer-const': 'off',
+    'prefer-destructuring': 'off',
   },
 };
