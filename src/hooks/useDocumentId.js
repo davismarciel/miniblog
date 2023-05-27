@@ -13,15 +13,12 @@ export const useDocumentId = (docCollection, id) => {
 
   useEffect(() => {
     async function loadDocument() {
-      if (cancelled) return;
-
       setLoading(true);
 
       try {
         const docRef = await doc(db, docCollection, id);
         const docSnap = await getDoc(docRef);
 
-        setLoading(false);
         setDocument(docSnap.data());
       } catch (error) {
         setError(error.message);
