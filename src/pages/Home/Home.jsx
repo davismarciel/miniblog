@@ -32,7 +32,7 @@ const Home = () => {
       </form>
       <div className="post-list">
         {/* // ERRO NO LOADING */}
-        {loading ? <p>Loading...</p> : <span />}
+        {/* {loading ? <p>Loading...</p> : <span />} */}
         {posts && posts.map((post) => (
           <h3 key={post.id} className={styles.post_container}>
             <PostDetail key={post.id} post={post} />
