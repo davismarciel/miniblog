@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { FirebaseError } from '@firebase/util';
 import {
   getAuth,
   createUserWithEmailAndPassword,

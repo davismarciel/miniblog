@@ -82,12 +82,12 @@ input, textarea {
   border-radius: 0;
 }
 
-.btn .btn-outline {
+.btn.btn-outline {
+  border-radius: 10px;
   background-color: transparent;
   border: 1px solid #000;
   color: #000;
   padding: 7px 30px;
-  border-radius: 0;
 }
 
 .btn:hover {
