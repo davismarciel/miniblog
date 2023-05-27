@@ -27,6 +27,7 @@ export const useDocumentId = (docCollection, id) => {
         setError(error.message);
         console.log(error);
       }
+      setLoading(false);
     }
     loadDocument();
   }, [docCollection, id, cancelled]);
