@@ -44,3 +44,10 @@
 .username {
   text-transform: capitalize;
 }
+
+img {
+  border: 1px solid #252525;
+  width: 100%;
+  height: 60%;
+  border-radius: 4px;
+}

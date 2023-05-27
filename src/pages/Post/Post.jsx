@@ -1,6 +1,5 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import styles from './Post.module.css';
-
 import { useDocumentId } from '../../hooks/useDocumentId';
 
 const Post = () => {
@@ -11,8 +10,13 @@ const Post = () => {
       {loading && <p className="loading">Loading post...</p>}
       {post && (
         <div className={styles.post_center}>
+          <div className={styles.back}>
+            <Link className="btn btn-outline" to={`/posts/edit/${post.id}`}>
+              Back to homepage
+            </Link>
+          </div>
           <h1>{post.title}</h1>
-          <img src={post.image} alt={post.title} />
+          <img className={styles.post_image} src={post.image} alt={post.title} />
           <p>{post.body}</p>
           <strong>About:</strong>
           <div className={styles.tags}>

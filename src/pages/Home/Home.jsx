@@ -4,7 +4,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useFetchDocument } from '../../hooks/useFetchDocument';
 // CSS
 import styles from './Home.module.css';
-import PostDetail from '../../components/PostDetail/PostDetaiil';
+import PostDetail from '../../components/PostDetail/PostDetail';
 
 const Home = () => {
   const [query, setQuery] = useState('');
