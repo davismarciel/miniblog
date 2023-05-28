@@ -7,14 +7,12 @@ const Post = () => {
   const { document: post, loading } = useDocumentId('posts', id);
   return (
     <div className={styles.post_container}>
+      <Link className={`btn btn-outline ${styles.back}`} to="/">
+        Back to homepage
+      </Link>
       {loading && <p className="loading">Loading post...</p>}
       {post && (
         <div className={styles.post_center}>
-          <div className={styles.back}>
-            <Link className="btn btn-outline" to="/">
-              Back to homepage
-            </Link>
-          </div>
           <h1>{post.title}</h1>
           <img className={styles.post_image} src={post.image} alt={post.title} />
           <p>{post.body}</p>

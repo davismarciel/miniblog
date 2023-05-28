@@ -1,7 +1,10 @@
 .post_container {
   text-align: center;
 }
-
+.post_container h1 {
+  font-size: 2.4em;
+  margin-top: 2em;
+}
 .post_container h3 {
   margin-bottom: 0.2em;
 }
@@ -35,10 +38,19 @@
   margin: 20px 20px 2px 20px;
 }
 
-.back {
-  font-size: 1em;
-  position: absolute;
+/* .back {
+  position: relative;
+}
+
+.back a {
   left: 80%;
   top: 10%;
+  margin-top: 3em;
+} */
+
+.back {
+  position: fixed;
+  left: 83%;
+  top: 80%;
   margin-top: 3em;
 }
