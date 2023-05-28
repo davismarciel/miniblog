@@ -11,7 +11,7 @@ const Post = () => {
       {post && (
         <div className={styles.post_center}>
           <div className={styles.back}>
-            <Link className="btn btn-outline" to={`/posts/edit/${post.id}`}>
+            <Link className="btn btn-outline" to="/">
               Back to homepage
             </Link>
           </div>

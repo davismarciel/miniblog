@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 import { Link } from 'react-router-dom';
 import { FaEye, FaEdit, FaWindowClose } from 'react-icons/fa';
 import styles from './Dashboard.module.css';
@@ -9,12 +10,16 @@ const Dashboard = () => {
   const { user } = useAuthValue();
   const uid = user.uid;
   const name = user.displayName;
+  console.log(name);
   const { documents: posts, loading, error } = useFetchDocument('posts', null, uid);
 
   const { deleteDocument } = useDeleteDocument('posts', uid);
 
   return (
     <div className={styles.dashboard}>
+      <h1>
+        Welcome, {name}!
+      </h1>
       <h2>Dashboard</h2>
       <p>Manage your posts</p>
       {posts && posts.length === 0 ? (
